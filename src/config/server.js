@@ -1,14 +1,19 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
+var routes = require('../app/routes/index');
 var server;
+var port;
 
 var start = function start(env) {
   server = express();
+  port = env.NODE_PORT;
 
   server.use(morgan('common'));
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(bodyParser.json());
+
+  routes(server);
 
   server.use(function errorHandler(err, req, res, next) {
     res.status(err.status || 500);
@@ -19,7 +24,7 @@ var start = function start(env) {
     next(err);
   });
 
-  server.listen(env.NODE_PORT, function() {
+  server.listen(port, function() {
     console.log("It's alive!");
   });
 };
