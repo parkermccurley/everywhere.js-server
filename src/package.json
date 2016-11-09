@@ -1,0 +1,8 @@
+{
+  "name": "everywhere.js-server",
+  "version": "1.0.0",
+  "description": "Replace me with a description for your JavaScript Web API",
+  "main": "index.js",
+  "author": "parker mccurley",
+  "license": "MIT"
+}
