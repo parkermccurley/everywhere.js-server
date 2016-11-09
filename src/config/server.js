@@ -5,7 +5,7 @@ var server;
 
 var start = function start(env) {
   server = express();
-  
+
   server.use(morgan('common'));
   server.use(bodyParser.urlencoded({ extended: true }));
   server.use(bodyParser.json());
