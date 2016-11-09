@@ -1,2 +1,4 @@
 var server = require('./config/server');
-server();
+var env = require('dotenv').load();
+
+server(env);

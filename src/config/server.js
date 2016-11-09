@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var server;
 
-var start = function start() {
+var start = function start(env) {
   server = express();
   
   server.use(morgan('common'));
@@ -19,7 +19,7 @@ var start = function start() {
     next(err);
   });
 
-  server.listen(3000, function() {
+  server.listen(env.NODE_PORT, function() {
     console.log("It's alive!");
   });
 };
