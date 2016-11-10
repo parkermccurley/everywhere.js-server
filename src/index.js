@@ -9,4 +9,5 @@ async.series([
   },
   function start(callback) {
     server(callback);
-  }]);
+  }
+]);
