@@ -4,8 +4,11 @@ Boilerplate for JavaScript-powered Web APIs
 ### Synopsis
 everywhere.js is a collection of JavaScript boilerplate repositiories which
 exist to provide an immediate entry point to development whenever inspiration
-strikes. the goal of the project is to provide these boilerplate repositories
-for every (reasonable) platform that JavaScript runs on.
+strikes. The goal of the project is to provide a boilerplate repository for
+every (reasonable) platform that JavaScript runs on. The concept behind each
+repository is to have a near-zero startup time, but also act as a blank
+canvas.  In this repository, for example, there is an example model to act as
+a template for modeling and routing, but it does nothing else.
 
 This repository provides an express-powered Web API.  If you choose to use
 mongoDB as your data source, time from `git clone` to active development is mere
