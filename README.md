@@ -12,7 +12,7 @@ mongoDB as your data source, time from `git clone` to active development is mere
 seconds.
 
 ### System Dependencies
-* node / npm
+* node && ( npm || yarn )
 * mongoDB (or, alter `config/database.js` and `models/` to your liking)
 
 ### Setup
