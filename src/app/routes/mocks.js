@@ -1,6 +1,6 @@
 var Mock = require('../models/mock');
 
-var mockRoutes = function mockRoutes(router) {
+var routes = function routes(router) {
   router.route('/mocks')
     .get(function getAllMocks(req, res, next) {
       Mock.find(function(err, mocks) {
@@ -23,4 +23,4 @@ var mockRoutes = function mockRoutes(router) {
     });
 };
 
-module.exports = mockRoutes;
+module.exports = routes;

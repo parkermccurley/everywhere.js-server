@@ -1,13 +1,10 @@
-var express = require('express');
-var mockRoutes = require('./mocks.js');
+var router = require('express').Router();
+var routes = require('require-dir')();
 
 var expressRouter = function expressRouter(server) {
-  var router = express.Router();
-
-  mockRoutes(router);
-
-  router.get('/', function(req, res, next) {
-    res.json({ message: 'Hello, world!' });
+  Object.keys(routes).forEach(function(model) {
+    var setRoutes = routes[model];
+    setRoutes(router);
   });
 
   server.use(router);

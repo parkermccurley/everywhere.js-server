@@ -1,12 +1,7 @@
-var mongoose = require('mongoose');
-
 var Mock;
+var mongoose = require('mongoose');
 var MockSchema = new mongoose.Schema({
-  title: String,
-  message: {
-    header: String,
-    body: String
-  }
+  title: String
 });
 
 Mock = mongoose.model('Mock', MockSchema);
