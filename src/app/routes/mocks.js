@@ -2,6 +2,7 @@ var Mock = require('../models/mock');
 
 var routes = function routes(router) {
   router.route('/mocks')
+
     .get(function getAllMocks(req, res, next) {
       Mock.find(function(err, mocks) {
         if (err) {
@@ -11,6 +12,7 @@ var routes = function routes(router) {
         }
       });
     })
+
     .post(function postMock(req, res, next) {
       var mock = new Mock(req.body);
       mock.save(function(err, mock) {

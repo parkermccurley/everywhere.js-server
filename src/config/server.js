@@ -5,8 +5,8 @@ var routes = require('../app/routes/index');
 var server;
 var port;
 
-var start = function start(env) {
-  port = env.NODE_PORT;
+var start = function start(callback) {
+  port = process.env.NODE_PORT;
 
   server = express();
   server.use(morgan('common'));
@@ -19,6 +19,10 @@ var start = function start(env) {
   server.listen(port, function() {
     console.log("It's alive!");
   });
+
+  if (callback) {
+    return callback;
+  }
 
   function errorHandler(err, req, res, next) {
     res.status(err.status || 500);
